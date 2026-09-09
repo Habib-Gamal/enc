@@ -12,9 +12,9 @@
   "tauri": {
     "allowlist": {
       "all": false,
-      "window":{
-        "all":true,
-        "setContentProtected": false
+      "window": {
+        "all": true,
+        "setContentProtected": true
       },
       "shell": {
         "all": false,

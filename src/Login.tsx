@@ -8,8 +8,6 @@ axios.defaults.withXSRFToken = true;
 axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 axios.defaults.baseURL = "https://km-editingschool.com/";
 export default function Login() {
-    
-    appWindow.setContentProtected(true);
     const [data, setData] = React.useState({ email: "", password: "" });
     const navigate = useNavigate();
     const submit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,6 +23,9 @@ export default function Login() {
     };
 
     useEffect(() => {
+        appWindow.setContentProtected(true).catch(() => {
+        });
+
         document.oncontextmenu = (e) => {
             e.preventDefault();
         };
