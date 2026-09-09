@@ -2,9 +2,12 @@ name: 'publish'
 
 # This will trigger the action on each push to the `release` branch.
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch: # This line enables the manual "Run workflow" button
+    inputs:
+      environment:
+        description: 'Environment to run against'
+        required: true
+        default: 'staging'
 
 jobs:
   publish-tauri:
