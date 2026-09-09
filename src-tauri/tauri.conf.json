@@ -1,0 +1,49 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "km-video-player",
+    "version": "1.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "window":{
+        "all":true,
+        "setContentProtected": false
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.taussri.deddv",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "km-editingschool",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  }
+}
